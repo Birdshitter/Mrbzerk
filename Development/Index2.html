@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MrBZerk - Cybersecurity Portfolio</title>
+    <style>
+        /* General Reset */
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #0d1117; /* Hacker theme dark background */
+            color: #c9d1d9; /* Hacker theme text color */
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            border-bottom: 2px solid #58a6ff;
+        }
+
+        header h1 {
+            font-size: 2.5em;
+        }
+
+        section {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        iframe {
+            display: block;
+            margin: 20px auto;
+            width: 100%;
+            max-width: 600px;
+            height: 300px;
+        }
+
+        .about-section {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .avatar {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+
+        .career-section {
+            margin-top: 50px;
+        }
+
+        .updates-section {
+            margin-top: 50px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            border-top: 2px solid #58a6ff;
+            margin-top: 50px;
+            font-size: 0.8em;
+        }
+
+        a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .highlight {
+            color: #58a6ff; /* Highlight color */
+        }
+
+        .visitor-counter {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #8b949e;
+        }
+    </style>
+    <script>
+        // Visitor Counter (Local Storage)
+        window.onload = function () {
+            let visitorCount = localStorage.getItem("visitorCount");
+            if (!visitorCount) {
+                visitorCount = 0;
+            }
+            visitorCount++;
+            localStorage.setItem("visitorCount", visitorCount);
+            document.getElementById("visitor-counter").innerText = `Visitor Count: ${visitorCount}`;
+        };
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to <span class="highlight">MrBZerk's</span> Cybersecurity Portfolio</h1>
+    </header>
+
+    <section class="about-section">
+        <img src="avatar.jpg" alt="Custom Avatar" class="avatar">
+        <div>
+            <h2>About Me</h2>
+            <p>I'm a 24-year-old Dane currently studying and working as an IT Supporter. I enjoy learning about Cyber Security for fun in my free time.</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>TryHackMe Progress</h2>
+        <iframe src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=4433792" style='border:none;'></iframe>
+        <p>Check out my TryHackMe profile: <a href="https://tryhackme.com/p/mrbzerk" target="_blank">https://tryhackme.com/p/mrbzerk</a></p>
+    </section>
+
+    <section class="career-section">
+        <h2>Career Accomplishments</h2>
+        <p>I am currently studying for the Danish IT / Data & Communications exam, which is comparable to the <span class="highlight">Cisco CCNA</span>.</p>
+    </section>
+
+    <section class="updates-section">
+        <h2>Updates</h2>
+        <ul id="updates-list">
+            <li>Update 1: Placeholder for future updates.</li>
+            <li>Update 2: Placeholder for future updates.</li>
+        </ul>
+        <p></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 MrBZerk. All rights reserved.</p>
+        <div class="visitor-counter">
+            <p id="visitor-counter">Visitor Count: Loading...</p>
+        </div>
+    </footer>
+</body>
+</html>
